@@ -32,7 +32,7 @@ export default {
       time: '',
       day: '',
       message: '',
-      gif: false,
+      gif: '',
       weekend: false
     }
   },
@@ -53,7 +53,7 @@ export default {
         this.message = 'Last Day!'
       } else {
         this.weekend = false
-        this.message = 'It\'s not weekend! :c'
+        this.message = 'It\'s not weekend yet! :c'
       }
     }, 1000)
   }

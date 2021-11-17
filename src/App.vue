@@ -1,67 +1,26 @@
 <template>
   <div id="app">
-    <div class="weekend">
-      <h2 v-if="weekend == false">
-        {{ message }}
-      </h2>
-      <h2 v-else>
-        It's weekend! :D
-      </h2>
-    </div>
-    <div class="now">
-      <h3>We are {{ day }}</h3>
-      <h3>It's {{ time }}</h3>
-    </div>
-    <div class="gif">
-      <div class="NotWe" v-if="gif == '0'">
-        <img src="https://cdn.asthriona.com/i/2021/11/IMG_9556.jpg" height="300px" alt="Not We">
-      </div>
-      <div class="we" v-if="gif == '1'">
-        <img src="https://c.tenor.com/hSThcLBDUfwAAAAC/the-office-lets-party.gif" alt="We">
-      </div>
-    </div>
+    <Weekend />
+    <TheFooter />
   </div>
 </template>
 
 <script>
-import dayjs from 'dayjs'
+import Weekend from './components/Weekend.vue'
+import TheFooter from './components/TheFooter.vue'
+
 export default {
-  name: 'App',
-  data () {
-    return {
-      time: '',
-      day: '',
-      message: '',
-      gif: '',
-      weekend: false
-    }
-  },
-  mounted () {
-    setInterval(() => {
-      this.time = dayjs().format('HH:mm:ss')
-      this.day = dayjs().format('dddd DD MMMM YYYY')
-      const weekDay = dayjs().format('dddd')
-      const weekHours = dayjs().hour('HH')
-      if (weekDay === 'Frieday' && weekHours >= '18') {
-        this.weekend = true
-        this.gif = '1'
-      } else if (weekDay === 'Tuesday') {
-        this.weekend = false
-        this.gif = '0'
-      } else if (weekDay === 'Frieday' && weekHours <= '18') {
-        this.weekend = false
-        this.message = 'Last Day!'
-      } else {
-        this.weekend = false
-        this.message = 'It\'s not weekend yet! :c'
-      }
-    }, 1000)
+  name: 'app',
+  components: {
+    Weekend,
+    TheFooter
   }
 }
 </script>
 
 <style>
-body, html {
+body,
+html {
   color: #ccc;
   background-color: #212226;
 }

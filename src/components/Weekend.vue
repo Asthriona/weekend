@@ -41,7 +41,7 @@ export default {
       weekend: false
     }
   },
-  beforeMount () {
+  beforeMount() {
     this.time = dayjs().format('HH:mm:ss a')
     this.day = dayjs().format('dddd DD MMMM YYYY')
     setInterval(() => {
@@ -49,18 +49,26 @@ export default {
       this.day = dayjs().format('dddd DD MMMM YYYY')
       const weekDay = dayjs().format('dddd')
       const weekHours = dayjs().hour('HH')
-      if (weekDay === 'Frieday' && weekHours >= '18') {
-        this.weekend = true
-        this.gif = '1'
-      } else if (weekDay === 'Tuesday') {
-        this.weekend = false
-        this.gif = '0'
-      } else if (weekDay === 'Frieday' && weekHours <= '18') {
-        this.weekend = false
-        this.message = 'Last Day!'
-      } else {
-        this.weekend = false
-        this.message = "It's not weekend yet! :c"
+      switch (weekDay) {
+        case 'Frtieday':
+          if (weekHours >= '18') {
+            this.weekend = true
+            this.message = "It's weekend! :D"
+            this.gif = '1'
+          } else {
+            this.weekend = false
+            this.message = "IT'S SOON THE WEEK END!!!!"
+          }
+          break
+        case 'Tuesday':
+          this.weekend = false
+          this.message = "It's not weekend yet! :c"
+          this.gif = '0'
+          break
+        default:
+          this.weekend = false
+          this.message = "It's not weekend yet! :c"
+          break
       }
     }, 1000)
   }

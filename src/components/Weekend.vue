@@ -48,9 +48,9 @@ export default {
       this.time = dayjs().format('HH:mm:ss')
       this.day = dayjs().format('dddd DD MMMM YYYY')
       const weekDay = dayjs().format('dddd')
-      const weekHours = dayjs().hour('HH')
+      const weekHours = dayjs().format('HH')
       switch (weekDay) {
-        case 'Frtieday':
+        case 'Friday':
           if (weekHours >= '18') {
             this.weekend = true
             this.message = "It's weekend! :D"

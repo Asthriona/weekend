@@ -1,10 +1,10 @@
 <template>
     <div class="footer">
         <p>
-            Code hosted on GitHub. Hosting and DNS Powered by Cloudlfare. <br>
+            Code hosted on <a href="https://github.com/Asthriona/weekend" target="_blank" rel="noopener noreferrer">GitHub</a>. Hosting and DNS Powered by <a href="https://www.cloudflare.com/hp/" target="_blank" rel="noopener noreferrer">Cloudlfare</a>. <br>
             Made by Asthriona, Inspired by <a href="https://estcequecestbientotleweekend.fr/" target="_blank" rel="noopener noreferrer">This website</a>
             My other websites and services: <br>
-            <a href="http://" target="_blank" rel="noopener noreferrer">Asthriona.com</a> • <a href="http://" target="_blank" rel="noopener noreferrer">Yukiko.app</a> • <a href="http://" target="_blank" rel="noopener noreferrer">IMG-UP </a>
+            <a href="https://asthriona.com" target="_blank" rel="noopener noreferrer">Asthriona.com</a> • <a href="https://yukiko.app" target="_blank" rel="noopener noreferrer">Yukiko.app</a> • <a href="https://imgup.asthriona.com/" target="_blank" rel="noopener noreferrer">IMG-UP </a>
         </p>
         <div class="foot_logo">
             <p>Operating Company</p>

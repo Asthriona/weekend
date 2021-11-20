@@ -2,7 +2,7 @@
     <div class="footer">
         <p>
             Code hosted on <a href="https://github.com/Asthriona/weekend" target="_blank" rel="noopener noreferrer">GitHub</a>. Hosting and DNS Powered by <a href="https://www.cloudflare.com/hp/" target="_blank" rel="noopener noreferrer">Cloudflare</a>. <br>
-            Made by Asthriona, Inspired by <a href="https://estcequecestbientotleweekend.fr/" target="_blank" rel="noopener noreferrer">This website</a>
+            Made by Asthriona, Inspired by <a href="https://estcequecestbientotleweekend.fr/" target="_blank" rel="noopener noreferrer">This website</a> <br>
             My other websites and services: <br>
             <a href="https://asthriona.com" target="_blank" rel="noopener noreferrer">Asthriona.com</a> • <a href="https://yukiko.app" target="_blank" rel="noopener noreferrer">Yukiko.app</a> • <a href="https://imgup.asthriona.com/" target="_blank" rel="noopener noreferrer">IMG-UP </a>
         </p>

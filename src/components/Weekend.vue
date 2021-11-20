@@ -44,6 +44,7 @@ export default {
   beforeMount() {
     this.time = dayjs().format('HH:mm:ss a')
     this.day = dayjs().format('dddd DD MMMM YYYY')
+    console.log(dayjs().format('dddd'))
     setInterval(() => {
       this.time = dayjs().format('HH:mm:ss')
       this.day = dayjs().format('dddd DD MMMM YYYY')
@@ -59,6 +60,16 @@ export default {
             this.weekend = false
             this.message = "IT'S SOON THE WEEK END!!!!"
           }
+          break
+        case 'Saturday':
+          this.weekend = true
+          this.message = "It's weekend! :D"
+          this.gif = '1'
+          break
+        case 'Sunday':
+          this.weekend = true
+          this.message = "It's weekend! :D"
+          this.gif = '1'
           break
         case 'Tuesday':
           this.weekend = false
